@@ -1,0 +1,1 @@
+Se subio la tarea 3, el codigo en formato txt y la captura del modelo de arduino de tinkercad
