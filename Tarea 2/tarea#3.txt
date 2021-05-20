@@ -1,0 +1,40 @@
+// C++ code
+//
+bool presionado1=0, presionado2=0;
+int valor=0;
+void setup()
+{
+  pinMode(12, OUTPUT); //LUZ VERDE
+  pinMode(8, OUTPUT);  //LUZ ROJA
+  
+  pinMode(4, INPUT);   //BOTON DE AUMENTAR
+  pinMode(2, INPUT);   //BOTON DE REDUCIR
+  
+  Serial.begin(9600);
+  Serial.println(valor);
+}
+
+void loop()
+{
+  presionado1=digitalRead(4);
+  presionado2=digitalRead(2);
+  
+  if(presionado1==1){digitalWrite(12,HIGH);}
+  else{ digitalWrite(12,LOW);}
+  
+  if(presionado2==1){digitalWrite(8,HIGH);}
+  else{ digitalWrite(8,LOW);}
+  
+  
+    if(presionado1==1){valor=valor+1;
+                       Serial.println(valor);
+                      }
+    
+    if(presionado2==1){valor=valor-1;
+                       Serial.println(valor);
+                      }
+  
+  
+ 
+  delay(200);
+}
